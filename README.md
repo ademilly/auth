@@ -6,6 +6,14 @@
     $ go get github.com/ademilly/auth
 ```
 
+### hash-cli
+
+hash-cli/ contains the source for a cli to generate hashes from password
+
+```bash
+    $ cd hashcli && go build
+```
+
 ## usage
 
 ### Login
@@ -57,4 +65,13 @@ Protect function wraps any http.Handler you want to be behind login
     # get some token 'abcd'
     $ curl -H "Authorization: Bearer abcd" localhost/hello
     Hello, World!
+```
+
+### Hash CLI
+
+Use the hash-cli to generate hashes
+
+```bash
+    $ ./hashcli/hashcli -username please -password subscribe
+    awesomehash
 ```
